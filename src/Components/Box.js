@@ -15,7 +15,7 @@ function Box(props) {
     let imgStyle = {
         width : "60%",
         height : "80%",
-        marginLeft : "10px"
+        marginLeft : "5px"
     }
     
     return (
