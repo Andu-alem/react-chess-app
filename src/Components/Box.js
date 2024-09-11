@@ -12,11 +12,18 @@ function Box(props) {
         color: props.piece === null ? "" : props.piece.player === "player1" ? "red" : "green",
         ...props.style
     }
+    let imgStyle = {
+        width : "60%",
+        height : "80%",
+        marginLeft : "10px"
+    }
     
     return (
         <div style={style} onClick={ props.boxClickHandler }>
             {
-                props.piece !== null ? props.piece.internalValue : "" 
+                props.piece !== null ? 
+                <img src={ props.piece.internalValue } style={ imgStyle } />
+                : ""  
             }
         </div>
     )

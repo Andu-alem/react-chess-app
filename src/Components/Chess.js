@@ -250,25 +250,25 @@ class Chess extends Component {
             if (upgradeTo === "1") {
                 return {
                     piece : "queen",
-                    value : "Q1",
+                    value : "pieces/queen-w.png",
                     id : `q1${promotedLength + 1}`
                 }
             } else if (upgradeTo === "2") {
                 return {
                     piece : "rook",
-                    value : "Ca1",
+                    value : "pieces/horse-w.png",
                     id : `c1${promotedLength + 3}`
                 }
             } else if (upgradeTo === "3") {
                 return {
                     piece : "bishop",
-                    value : "Bi1",
+                    value : "pieces/bishop-w.png",
                     id : `b1${promotedLength + 3}`
                 }
             } else if (upgradeTo === "4") {
                 return {
                     piece : "knight",
-                    value : `H1`,
+                    value : `pieces/horse-w.png`,
                     id : `h1${promotedLength + 3}`
                 }
             }
@@ -278,25 +278,25 @@ class Chess extends Component {
             if (upgradeTo === "1") {
                 return {
                     piece : "queen",
-                    value : "Q2",
+                    value : "pieces/queen-b.png",
                     id : `q2${promotedLength + 1}`
                 }
             } else if (upgradeTo === "2") {
                 return {
                     piece : "rook",
-                    value : "Ca2",
+                    value : "pieces/rook-b.png",
                     id : `c2${promotedLength + 3}`
                 }
             } else if (upgradeTo === "3") {
                 return {
                     piece : "bishop",
-                    value : "Bi2",
+                    value : "pieces/bishop-b.png",
                     id : `b2${promotedLength + 3}`
                 }
             } else if (upgradeTo === "4") {
                 return {
                     piece : "knight",
-                    value : `H2`,
+                    value : `pieces/horse-b.png`,
                     id : `h2${promotedLength + 3}`
                 }
             }
