@@ -1,6 +1,6 @@
 let board = [];
-let black = "#333333";
-let white = "#ffffff";
+let black = "#86592d";
+let white = "#8c8c8c";
 for (let index = 0; index < 64; index++) {
     if (index < 8) {
         board[`a${index + 1}`] = {
