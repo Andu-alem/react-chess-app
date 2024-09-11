@@ -12,7 +12,7 @@ class Header extends Component{
     }
     render(){
         return(
-            <nav className="navbar navbar-expand-md navbar-dark border-bottom" style={{ backgroundColor : "#e60000" }}>
+            <nav className="navbar navbar-expand-md navbar-dark border-bottom" style={{ backgroundColor : "#4d4d4d" }}>
                 <div className="container navbar-header">
                         <a className="navbar-brand h5 text-white offset-md-1 fw-bold" href="#">Andi's Chess Player</a>
                         <button 
