@@ -4,7 +4,8 @@ let DataDisplayArea = ({ player, gain, pieces }) => {
         textAlign : "left",
         minHeight : "100px",
         paddingLeft : "10px",
-        fontStyle : "italic"
+        fontStyle : "italic",
+        overflowWrap : "all"
     }
     return (
         <div className="col-lg-3 col-11 m-auto mt-2 text-white" style={style} >
@@ -12,8 +13,8 @@ let DataDisplayArea = ({ player, gain, pieces }) => {
             <section>
                 <label>Collected: </label>
                 { 
-                    gain.map( (item, i) => {                        
-                       return <img style = {{ width: "20px", height: "20px" }} key={i} src={ pieces[item].internalvalue } />
+                    gain.map( (item, i) => {
+                return <img style = {{ width: "20px", height: "20px" }} key={i} src={ pieces[item].internalValue } />
                     })
                 }
             </section>
