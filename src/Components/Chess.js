@@ -324,6 +324,7 @@ class Chess extends Component {
             <div className="row">
                 <DataDisplayArea 
                                 player={"Computer"} 
+                                pieces={ this.state.pieces }
                                 gain={ this.state.playerTwoGain } />
                 <Board 
                         board = { this.state.board }
@@ -335,6 +336,7 @@ class Chess extends Component {
                         undoLastTwoMoves = { this.undoLastTwoMoves } />                    
                 <DataDisplayArea 
                                 player={"Human"} 
+                                pieces={ this.state.pieces }
                                 gain={ this.state.playerOneGain } />
             </div>
             

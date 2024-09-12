@@ -1,4 +1,4 @@
-let DataDisplayArea = (props) => {
+let DataDisplayArea = ({ player, gain, pieces }) => {
     let style = {
         border : "1px groove lightgrey",
         textAlign : "left",
@@ -8,14 +8,14 @@ let DataDisplayArea = (props) => {
     }
     return (
         <div className="col-lg-3 col-11 m-auto mt-2 text-white" style={style} >
-            <h4>{ props.player }</h4>
+            <h4>{ player }</h4>
             <section>
                 <label>Collected: </label>
                 { 
-                    props.gain.map( (item, i) => {                        
-                       return <span style = {{ color : "green", fontWeight : "bold", paddingLeft : "5px" }} key={i}>{ item } </span>
+                    gain.map( (item, i) => {                        
+                       return <img style = {{ width: "20px", height: "20px" }} key={i} src={ pieces[item].internalvalue } />
                     })
-                    }
+                }
             </section>
         </div>
     )
