@@ -14,7 +14,7 @@ let DataDisplayArea = ({ player, gain, pieces }) => {
                 <label>Collected: </label>
                 { 
                     gain.map( (item, i) => {
-                return <img style = {{ width: "20px", height: "20px" }} key={i} src={ pieces[item].internalValue } />
+                        return <img alt='' style = {{ width: "20px", height: "20px" }} key={i} src={ pieces[item].internalValue } />
                     })
                 }
             </section>

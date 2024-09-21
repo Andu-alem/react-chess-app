@@ -2,8 +2,8 @@ function Box(props) {
     let style = {
         border : props.clickedBox === props.id ? "3px groove blue" : props.pieceId === "k1" && props.isKOneInCheck ? "3px groove red" : "",
         boxSizing: "border-box",
-        width : "52px",
-        height : "52px",
+        width : "43px",
+        height : "43px",
         cursor : "pointer",
         fontWeight : "bold",
         paddingLeft : "2%",
@@ -22,7 +22,7 @@ function Box(props) {
         <div style={style} onClick={ props.boxClickHandler }>
             {
                 props.piece !== null ? 
-                <img src={ props.piece.internalValue } style={ imgStyle } />
+                <img src={ props.piece.internalValue } style={ imgStyle } alt=''/>
                 : ""  
             }
         </div>

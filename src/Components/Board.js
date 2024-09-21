@@ -2,14 +2,14 @@ import Box from './Box';
 
 let Board = (props) => {
     let style = {
-        width : "450px",
+        width : "402px",
         border : "1px solid grey",
         transform : "rotateZ(-90deg)"
     }
 
     return (
-        <div className="col-lg-5 col-10 mb-2">
-            <div className="d-flex flex-wrap m-auto mt-4 p-2" style={ style } >
+        <div className="col-lg-4 col-11 mb-2">
+            <div className="d-flex flex-wrap m-auto mt-4 p-2 ps-4" style={ style } >
                 <h1 style = {{
                     position : "absolute",
                     top : "200px",
@@ -35,7 +35,7 @@ let Board = (props) => {
                         })
                 }
             </div>
-            <button className="offset-7 offset-md-5 btn text-white w-50" onClick={ props.undoLastTwoMoves }>Undo last move</button>
+            <button className="offset-7 offset-md-5 btn text-white w-50 mt-3" onClick={ props.undoLastTwoMoves }>Undo last move</button>
         </div>
     )
 }
