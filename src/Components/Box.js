@@ -2,8 +2,8 @@ function Box(props) {
     let style = {
         border : props.clickedBox === props.id ? "3px groove blue" : props.pieceId === "k1" && props.isKOneInCheck ? "3px groove red" : "",
         boxSizing: "border-box",
-        width : "43px",
-        height : "43px",
+        width : "39px",
+        height : "39px",
         cursor : "pointer",
         fontWeight : "bold",
         paddingLeft : "2%",

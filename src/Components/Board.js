@@ -2,7 +2,7 @@ import Box from './Box';
 
 let Board = (props) => {
     let style = {
-        width : "402px",
+        width : "366px",
         border : "1px solid grey",
         transform : "rotateZ(-90deg)"
     }
