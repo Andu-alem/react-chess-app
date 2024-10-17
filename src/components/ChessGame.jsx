@@ -244,7 +244,7 @@ const ChessGame = (props) => {
             <h2 className="font-bold text-lg mt-1 px-1 border-r border-green-500">
               { opponentName }<br/><span className={`${isInCheck && !(sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'block':'hidden'} text-sm text-red-500`}>Check</span>
             </h2>
-            <CapturedList pieces={ capturedWhites } />
+            <CapturedList pieces={ sidePreference === 'w' ? capturedWhites:capturedBlacks } />
         </div>
 
         <div className="shadow-md shadow-zinc-700">
@@ -268,7 +268,7 @@ const ChessGame = (props) => {
             <h2 className="font-bold text-lg mt-1 px-1 border-r border-green-500">
               { playerName } <br/><span className={`${isInCheck && (sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'block':'hidden'} text-sm text-red-500`}>Check</span>
             </h2>
-            <CapturedList pieces={ capturedBlacks } />
+            <CapturedList pieces={ sidePreference === 'w' ? capturedBlacks:capturedWhites } />
         </div>
 
         <div className="my-3 py-2 border border-zinc-700 rounded-lg p-1">
