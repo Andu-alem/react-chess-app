@@ -50,7 +50,7 @@ const App = () => {
   return (
     <div className="w-[96%] lg:w-[87%] min-h-[100vh] shadow-zinc-700 mx-auto">
       <Header menuClicked={menuClicked} setMenuClicked={setMenuClicked} settingBarProps={ settingBarProps } />
-      <div className={`${wellcoming ? 'fixed':'hidden'} opacity-[.95] min-h-[100vh] w-[96%] lg:w-[87%] top-0 bg-gradient-to-tl from-zinc-900 to-zinc-700`}>
+      <div className={`${wellcoming ? 'fixed':'hidden'} opacity-[.95] min-h-[100vh] w-[96%] lg:w-[87%] top-0 bg-zinc-900`}>
           <Wellcome setupData={ setupData } />
       </div>
       <div className={`${wellcoming || menuClicked ? 'relative -z-50':'static'} sm:flex sm:justify-between sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] mx-auto`}>

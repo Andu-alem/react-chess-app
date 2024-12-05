@@ -45,12 +45,12 @@ const Wellcome = (props) => {
     }
 
     return (
-        <div className="w-[90%] ms:w-[70%] mx-auto p-3 ms:px-[10%] sm:px-[15%] lg:px-[23%] mt-[20vh] bg-black shadow-lg shadow-zinc-700 tracking-wider">
+        <div className="w-[90%] ms:w-[70%] mx-auto p-3 ms:px-[10%] sm:px-[15%] lg:px-[23%] mt-[20vh] bg-black shadow-sm shadow-zinc-700 rounded-lg tracking-wider">
             <div className="w-[100%] min-h-[50vh] text-center text-white pt-[10%]">
                 <div className={`${isNameSet ? 'hidden':'block'}`}>
-                    <h3 className="font-bold text-lg bg-gradient-to-r from-amber-700 via-amber-400 to-white inline-block text-transparent bg-clip-text">Wellcome To ChessZone</h3>
+                    <h3 className="font-bold text-md bg-gradient-to-r from-amber-700 via-amber-400 to-white inline-block text-transparent bg-clip-text">Wellcome To ChessZone</h3>
                     <div className="mt-3">
-                        <label className="font-medium text-lg" htmlFor="name">Your name</label>
+                        <label className="text-sm" htmlFor="name">Your name</label>
                         <input 
                             className="text-black border-3 w-[70%] my-2 border-sky-900 rounded-lg px-2 font-medium bg-zinc-100" 
                             type="text" 
@@ -58,41 +58,41 @@ const Wellcome = (props) => {
                             onChange={ changeHandler } />
                     </div>
                     <button 
-                        className="flex border border-green-500 rounded-lg px-2 py-1 mt-10 mx-[30%] font-bold hover:bg-green-500"
+                        className="flex border border-green-500 rounded-lg px-2 py-1 mt-10 mx-[30%] font-medium hover:bg-green-500"
                         onClick={ checkNameSet }
                     >
                         Next <ChevronDoubleRightIcon className="w-[30px] h-[25px] mt-1 text-green-500 hover:text-sky-300" />
                     </button>
                 </div>
                 <div className={`${isNameSet && !withAi && !withFriend ? 'block':'hidden'} `}>
-                    <h3 className="font-bold text-xl capitalize bg-gradient-to-r from-zinc-700 to-white inline-block text-transparent bg-clip-text">Okay { name }</h3>
-                    <div className="mt-3 border border-zinc-700 py-4">
-                        <h4 className="text-sm my-2">With who do you want to play?</h4>
-                        <p className="flex cursor-pointer mx-[20%] bg-zinc-900 my-1 text-sm font-medium p-1 rounded-md hover:bg-zinc-700" onClick={ () => setWithAi(true) }>
-                            <ChevronRightIcon className="w-[25px] h-[25px] text-green-500 pt-1" /> with AI
+                    <h3 className="font-bold text-xl capitalize bg-gradient-to-r from-zinc-700 via-blue-700 to-white inline-block text-transparent bg-clip-text">Okay { name }</h3>
+                    <div className="mt-3 border border-zinc-700 rounded-lg px-1 py-4">
+                        <h4 className="text-[15px] my-2">With who do you want to play?</h4>
+                        <p className="flex cursor-pointer mx-[20%] bg-zinc-900 my-1 text-[17px] p-1 rounded-md hover:bg-zinc-700" onClick={ () => setWithAi(true) }>
+                            <ChevronRightIcon className="w-[25px] h-[25px] text-green-500 pt-1" />AI
                         </p>
-                        <p className="flex cursor-pointer mx-[20%] bg-zinc-900 my-1 text-sm font-medium p-1 rounded-md hover:bg-zinc-700" onClick={ () => setFriend(true) }>
-                            <ChevronRightIcon className="w-[25px] h-[25px] text-green-500 pt-1" /> with Friend
+                        <p className="flex cursor-pointer mx-[20%] bg-zinc-900 my-1 text-[17px] p-1 rounded-md hover:bg-zinc-700" onClick={ () => setFriend(true) }>
+                            <ChevronRightIcon className="w-[25px] h-[25px] text-green-500 pt-1" />A Friend
                         </p>
                     </div>
                 </div>
 
                 <div className={`${withAi || withFriend ? 'block':'hidden'} text-white`}>
-                    <p className="font-medium text-sm">Okay {name} you're going to play with { withAi ? 'AI oponent':'your friend'}</p>
-                    <div className="border border-zinc-700 py-5 mt-3 text-sm my-1">
+                    <p className="text-sm">Okay {name} you're going to play with { withAi ? 'AI oponent':'your friend'}</p>
+                    <div className="border border-zinc-700 rounded-lg py-5 mt-3 text-[15px] my-1">
                         <div className={`${withAi ? 'block':'hidden'}`}>Challenge level(1-20)
                             <div className="flex ml-[30%] mt-3">
                                 <MinusIcon 
-                                    className="w-[25px] h-[25px] bg-zinc-900 mt-[3px] text-green-500 hover:bg-zinc-700 hover:text-white rounded-md" 
+                                    className="w-[22px] h-[22px] bg-zinc-900 mt-[3px] text-white hover:bg-zinc-700 hover:text-white rounded-md" 
                                     onClick={decrement} />
                                 <input 
-                                    className="w-[50px] rounded-md mx-2 text-zinc-900 font-bold text-sm pl-2 bg-zinc-200" 
+                                    className="w-[50px] rounded-md mx-2 text-zinc-900 font-bold pl-2 bg-zinc-200" 
                                     type="number" 
                                     name="level" 
                                     value={ level } 
                                     onChange={levelChange}/>
                                 <PlusIcon 
-                                    className="w-[25px] h-[25px] bg-zinc-900 mt-[3px] rounded-md text-green-500 hover:bg-zinc-700 hover:text-white" 
+                                    className="w-[22px] h-[22px] bg-zinc-900 mt-[3px] rounded-md text-white hover:bg-zinc-700 hover:text-white" 
                                     onClick={increment}/>
                             </div> 
                         </div>
@@ -109,18 +109,18 @@ const Wellcome = (props) => {
                             <h3>Which side you prefer?</h3>
                             <div className="mt-2">
                                 <button 
-                                    className={`${sidePreference === 'w'? 'text-green-500':'text-white'} font-medium border border-zinc-700 rounded-lg px-1`}
+                                    className={`${sidePreference === 'w'? 'text-green-500':'text-white'} font-medium hover:opacity-75 border border-zinc-700 rounded-lg px-2`}
                                     onClick={() => setSidePreference('w')}
                                     >White</button>
                                 <button 
-                                    className={`${sidePreference === 'b'? 'text-green-500':'text-white'} mx-2 font-medium border border-zinc-700 rounded-lg px-1`}
+                                    className={`${sidePreference === 'b'? 'text-green-500':'text-white'} mx-2 font-medium hover:opacity-75 border border-zinc-700 rounded-lg px-2`}
                                     onClick={() => setSidePreference('b')}
                                     >Black</button>
                             </div>
                         </div>
                     </div>
                     <button 
-                        className="border border-green-500 px-2 rounded-lg mt-7 hover:bg-green-500 hover:text-white"
+                        className="border border-green-500 px-2 rounded-lg mt-7 hover:bg-green-700 hover:text-white"
                         onClick={ startGame }
                     >
                         Start

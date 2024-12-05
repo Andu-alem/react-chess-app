@@ -219,6 +219,7 @@ const ChessGame = (props) => {
     setGameStarted(false)
     setIsWhiteTurn(true)
     setIsInCheck(false)
+    setFen([])
     if (makeFirstMove) {
       makeAiMove()
       setGameStarted(true)
@@ -241,7 +242,7 @@ const ChessGame = (props) => {
   return (
     <div className="">
         <div className={`flex justify-start px-1 my-1 min-h-[50px] border border-gray-700 ${isInCheck && (sidePreference==='w'? !isWhiteTurn:isWhiteTurn) ? 'text-red-500 border-red-500': (sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'text-white border-gray-700':'text-green-500 border-green-500'}`}>
-            <h2 className="font-bold text-lg mt-1 px-1 border-r border-green-500">
+            <h2 className="font-bold text-sm capitalize mt-1 px-1 border-r border-green-500">
               { opponentName }<br/><span className={`${isInCheck && !(sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'block':'hidden'} text-sm text-red-500`}>Check</span>
             </h2>
             <CapturedList pieces={ sidePreference === 'w' ? capturedWhites:capturedBlacks } />
@@ -265,7 +266,7 @@ const ChessGame = (props) => {
             />
         </div>
         <div className={`flex justify-start px-1 my-2 min-h-[50px] border border-gray-700 ${isInCheck && (sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'text-red-500 border-red-500': !(sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'text-white border-gray-700':'text-green-500 border-green-500'}`}>
-            <h2 className="font-bold text-lg mt-1 px-1 border-r border-green-500">
+            <h2 className="font-bold text-sm mt-1 px-1 border-r border-green-500 capitalize">
               { playerName } <br/><span className={`${isInCheck && (sidePreference==='w'? isWhiteTurn:!isWhiteTurn) ? 'block':'hidden'} text-sm text-red-500`}>Check</span>
             </h2>
             <CapturedList pieces={ sidePreference === 'w' ? capturedBlacks:capturedWhites } />
